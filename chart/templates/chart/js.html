@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block js %}
+<script src="https://d3js.org/d3.v5.min.js" charset="utf-8"></script>
+<script src="https://d3js.org/d3-scale-chromatic.v1.min.js" charset="utf-8"></script> 
+
+<link rel="stylesheet" type="text/css" href="{% static 'chart/css/d3Chart.css' %}">
+
+<div id="container" class="chart-wrapper" align="center">
+</div>
+
+<script> var path = "{% url 'chart:get_dots' %}" </script>
+<script type="text/javascript" src="{% static 'chart/js/d3Chart.js' %}"></script>
+
+
+{% endblock %}
